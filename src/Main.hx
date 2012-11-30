@@ -1,6 +1,8 @@
 import com.haxepunk.Engine;
 import com.haxepunk.HXP;
 
+import worlds.GameWorld;
+
 class Main extends Engine
 {
 
@@ -26,7 +28,8 @@ class Main extends Engine
 		}
 #end
 		HXP.screen.color = kClearColor;
-//		HXP.world = new YourWorld();
+		HXP.screen.scale = 1;
+		HXP.world = new GameWorld();
 	}
 
 	public static function main()
