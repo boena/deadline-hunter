@@ -10,6 +10,7 @@ import com.haxepunk.utils.Key;
 import com.haxepunk.utils.Input;
 import com.haxepunk.World;
 import com.haxepunk.graphics.Image;
+import com.haxepunk.Sfx;
 
 import com.haxepunk.tmx.TmxEntity;
 import flash.geom.Point;
@@ -101,6 +102,32 @@ class GameWorld extends World {
 			HXP.setCamera(_player.x + _player.width / 2 - HXP.width / 2, _player.y + _player.height / 2 - HXP.height / 2);
 		}
 
+		updateMobCollisions();
+		updateItems();
+
 		super.update();
+	}
+
+	private function updateItems():Void
+	{
+		var code : CodePiece = cast _player.collide('code', _player.x, _player.y);
+		if( code != null )
+		{
+			new Sfx("sfx/code.wav").play();
+			remove(code);
+			codeCollected++;
+		}
+	}
+
+	private function updateMobCollisions()
+	{
+		var mob : Bug = cast _player.collide('mob', _player.x, _player.y);
+		if( mob != null )
+		{			
+			new Sfx("sfx/die.wav").play();
+			_player.hp--;
+			if(_player.hp <= 0)
+				HXP.world = new GameOverWorld();
+		}
 	}
 }

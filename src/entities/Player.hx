@@ -22,6 +22,7 @@ class Player extends PhysicsEntity
 	private static var jumpStyle:JumpStyle = Normal;
 	private static inline var kMoveSpeed:Float = 1.2;
 	private static inline var kJumpForce:Int = 20;
+	public var hp:Int = 3;
 
 	public var hasTouchTheGround(default, null) : Bool;
 

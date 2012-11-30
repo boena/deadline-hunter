@@ -142,9 +142,19 @@ class ApplicationMain {
             return Assets.getBitmapData ("gfx/code.png");
          
 		
+		if (inName=="gfx/gameover.png")
+			 
+            return Assets.getBitmapData ("gfx/gameover.png");
+         
+		
 		if (inName=="gfx/hq.png")
 			 
             return Assets.getBitmapData ("gfx/hq.png");
+         
+		
+		if (inName=="gfx/menu.png")
+			 
+            return Assets.getBitmapData ("gfx/menu.png");
          
 		
 		if (inName=="gfx/player.png")
@@ -155,6 +165,21 @@ class ApplicationMain {
 		if (inName=="gfx/tileset.png")
 			 
             return Assets.getBitmapData ("gfx/tileset.png");
+         
+		
+		if (inName=="sfx/code.wav")
+			 
+            return Assets.getSound ("sfx/code.wav");
+         
+		
+		if (inName=="sfx/die.wav")
+			 
+            return Assets.getSound ("sfx/die.wav");
+         
+		
+		if (inName=="sfx/power.wav")
+			 
+            return Assets.getSound ("sfx/power.wav");
          
 		
 		if (inName=="font/04B_03__.ttf")
@@ -197,9 +222,14 @@ class NME_gfx_preloader_haxepunk_png extends nme.display.BitmapData { public fun
 class NME_font_04b_03___ttf extends nme.text.Font { }
 class NME_gfx_bug_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_gfx_code_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_gfx_gameover_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_gfx_hq_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_gfx_menu_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_gfx_player_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_gfx_tileset_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_sfx_code_wav extends nme.media.Sound { }
+class NME_sfx_die_wav extends nme.media.Sound { }
+class NME_sfx_power_wav extends nme.media.Sound { }
 class NME_font_5 extends nme.text.Font { }
 class NME_levels_map_tmx extends nme.utils.ByteArray { }
 

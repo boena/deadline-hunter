@@ -13,7 +13,7 @@ class Collectable extends Entity
 	
 	public function new (objectGid: Int, px: Int, py: Int) 
 	{
-		super(px, py - 32);
+		super(px, py - 16);
 		
 		_objectGid = objectGid;
 		

@@ -13,7 +13,7 @@
  </layer>
  <layer name="stage" width="59" height="30">
   <data encoding="base64" compression="zlib">
-   eJztl8kOgCAMRIXEk8v/f66QeDAkBpAuU+pL5ojtswdoWHwQ7nigdA2NsciX3q3+D9S+OOB2RZq3R1ftSJDrrEK1tEFzjY9Q8+a6pewpR8rJUFcD7blyzrFE21WS7BqJU4P6e61wuGqk1XWG9Lh6YEZXhDeaFB5ckd7eXCDuGRyg7lSUoO+Po0jdwwiM9urN1Yrv79p33purlYy6XqpQAhA=
+   eJzll8kKgDAMRK2gF5f//1wreBChmJplEvNgTmKb1xRty5CDciUDT9dCTES+1B51PbzWpYG2q6d+Z3RFx4JznsloLjTeXMdbpGm5LjVrzVazK8yLAN1XzT4+QbtacrqOwnlDejwqGq6IUF3/kB7XDHg4u0nTsweiu3P3ewR/zbO3F3/kPcPSH32nsrizaf+fuHW1nvWO49WTUmfPGNwaoiDhival9vsPrlQyuc7M9yW+bZbhuh5sBwIy
   </data>
  </layer>
  <objectgroup color="#ff0000" name="mobs" width="59" height="30">
@@ -21,8 +21,24 @@
   <object x="197" y="196" width="22" height="23"/>
   <object x="519" y="198" width="19" height="19"/>
   <object x="966" y="195" width="16" height="16"/>
+  <object x="134" y="871" width="9" height="12"/>
+  <object x="331" y="873" width="9" height="8"/>
+  <object x="554" y="873" width="14" height="13"/>
+  <object x="842" y="871" width="7" height="10"/>
+  <object x="1106" y="878" width="6" height="6"/>
+  <object x="717" y="655" width="5" height="7"/>
  </objectgroup>
  <objectgroup color="#aaff00" name="pows" width="59" height="30">
   <object x="98" y="33" width="28" height="18"/>
+  <object x="298" y="396" width="13" height="11"/>
+  <object x="712" y="425" width="12" height="11"/>
+  <object x="1202" y="266" height="11"/>
+  <object x="364" y="197" width="9" height="15"/>
+  <object x="1554" y="617" height="7"/>
+  <object x="1171" y="905" height="9"/>
+  <object x="651" y="646" width="8" height="5"/>
+  <object x="239" y="906" width="9" height="10"/>
+  <object x="10" y="808" width="12" height="13"/>
+  <object x="44" y="522" width="6" height="6"/>
  </objectgroup>
 </map>
