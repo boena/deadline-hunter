@@ -20,22 +20,44 @@ class Player extends Entity {
 
 		Input.define("left", [Key.LEFT, Key.A]);
 		Input.define("right", [Key.RIGHT, Key.D]);
+
+		_velocity = 0;
 	}
 
 
   private function handleInput()
   {
-		_velocity = 0;
+		_acceleration = 0;
 
 		if (Input.check("left"))
 		{
-			_velocity = -5;
+			_acceleration = -1;
 		}
 
 		if (Input.check("right"))
 		{
-			_velocity = 5;
+			_acceleration = 1;
 		}
+  }
+
+  private function move() 
+  {
+  	_velocity += _acceleration;
+  	if(Math.abs(_velocity) > 5)
+  	{
+  		_velocity = 5 * HXP.sign(_velocity);
+  	}
+
+  	if(_velocity < 0)
+  	{
+  		_velocity = Math.min(_velocity + 0.4, 0);
+  	}
+  	else if(_velocity > 0)
+  	{
+  		_velocity = Math.max(_velocity - 0.4, 0);
+  	}
+
+  	moveBy(_velocity, 0);
   }
  
 	private function setAnimations()
@@ -67,7 +89,7 @@ class Player extends Entity {
 	{
 		handleInput();
 
-		moveBy(_velocity, 0);
+		move();
 
 		setAnimations();
 
