@@ -44,6 +44,10 @@ class Assets {
 			resourceTypes.set ("gfx/preloader/haxepunk.png", "image");
 			resourceClasses.set ("font/04B_03__.ttf", NME_font_04b_03___ttf);
 			resourceTypes.set ("font/04B_03__.ttf", "font");
+			resourceClasses.set ("gfx/bug.png", NME_gfx_bug_png);
+			resourceTypes.set ("gfx/bug.png", "image");
+			resourceClasses.set ("gfx/code.png", NME_gfx_code_png);
+			resourceTypes.set ("gfx/code.png", "image");
 			resourceClasses.set ("gfx/player.png", NME_gfx_player_png);
 			resourceTypes.set ("gfx/player.png", "image");
 			resourceClasses.set ("gfx/tileset.png", NME_gfx_tileset_png);

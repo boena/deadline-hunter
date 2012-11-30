@@ -132,6 +132,16 @@ class ApplicationMain {
 			 return Assets.getFont ("font/04B_03__.ttf");
 		 
 		
+		if (inName=="gfx/bug.png")
+			 
+            return Assets.getBitmapData ("gfx/bug.png");
+         
+		
+		if (inName=="gfx/code.png")
+			 
+            return Assets.getBitmapData ("gfx/code.png");
+         
+		
 		if (inName=="gfx/player.png")
 			 
             return Assets.getBitmapData ("gfx/player.png");
@@ -180,6 +190,8 @@ class NME_gfx_debug_console_play_png extends nme.display.BitmapData { public fun
 class NME_gfx_debug_console_step_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_gfx_preloader_haxepunk_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_font_04b_03___ttf extends nme.text.Font { }
+class NME_gfx_bug_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_gfx_code_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_gfx_player_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_gfx_tileset_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_font_5 extends nme.text.Font { }

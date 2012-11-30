@@ -15,11 +15,13 @@ import flash.geom.Point;
 
 import entities.Player;
 import entities.Block;
+import entities.mobs.Bug;
 
 
 class GameWorld extends World {
 
 	private var _player : Player;
+	private var _map : TmxEntity;
 			
 	public function new()
 	{
@@ -28,13 +30,16 @@ class GameWorld extends World {
 
 	public override function begin()
 	{
-		var _map = new TmxEntity("levels/map.tmx");
+		_map = new TmxEntity("levels/map.tmx");
 		_map.loadGraphic("gfx/tileset.png", ["stage"]);
 		_map.loadMask("stage");
 		add(_map);
 
-		_player = new Player(0, 0);
+		_player = new Player(0, 300);
 		add(_player);
+
+		var bug = new Bug(485, 300);
+		add(bug);
 		
 		Input.define("restart", [Key.ESCAPE]);
 	}
@@ -44,6 +49,20 @@ class GameWorld extends World {
 		if (Input.check("restart"))
 		{
 			// Restart level
+		}
+
+		//Center the camera on the player
+		if(_player.x - HXP.width / 2 < 0)
+		{
+			HXP.setCamera(0, _player.y + _player.height / 2 - HXP.height / 2);
+		}
+		else if (_player.x + HXP.width / 2 > _map.width) 
+		{
+			HXP.setCamera(_map.width -  HXP.width, _player.y + _player.height / 2 - HXP.height / 2);
+		}
+		else
+		{
+			HXP.setCamera(_player.x + _player.width / 2 - HXP.width / 2, _player.y + _player.height / 2 - HXP.height / 2);
 		}
 
 		super.update();
