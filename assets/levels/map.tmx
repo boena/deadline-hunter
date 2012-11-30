@@ -8,12 +8,12 @@
  </tileset>
  <layer name="bg" width="59" height="30">
   <data encoding="base64" compression="zlib">
-   eJzt0TEKwDAIBdAM9v5XzhoKITRDau17IC5/8GNrQCbx9gEH6VpLTHZVMczMdZvdTAarf1bquqLr88wX/KkrAAAAkEcHxncA8Q==
+   eJzt0bsKgDAQBECLWPn6/7/1SgmGEAuNYQaWNFtkuWkCepK+/sCLbB1LKryjSpeUzFmednpQu2e+Y4mskS2yR46bzl+NdNcaW9s7AAAAAC1OqdoBMg==
   </data>
  </layer>
  <layer name="stage" width="59" height="30">
   <data encoding="base64" compression="zlib">
-   eJzll8kKgDAMRK2gF5f//1wreBChmJplEvNgTmKb1xRty5CDciUDT9dCTES+1B51PbzWpYG2q6d+Z3RFx4JznsloLjTeXMdbpGm5LjVrzVazK8yLAN1XzT4+QbtacrqOwnlDejwqGq6IUF3/kB7XDHg4u0nTsweiu3P3ewR/zbO3F3/kPcPSH32nsrizaf+fuHW1nvWO49WTUmfPGNwaoiDhival9vsPrlQyuc7M9yW+bZbhuh5sBwIy
+   eJzll90KgCAMRlOo93/kELwIIdraz7e5A99VpDtOSttRgzZTgdW1EZORP7VnXY+odVlg7Rqp3xVd0fFgzHM6zYUmmmt/RJtorpagXS37uIJ29WS4duV8oT0eFQtXRKiuO4TjWoEIZzdtOHsgu7t0v2fwtzx7R/FH3jM8/dF3Ko87m/X/SVrX2zPuOFE9KXVyxpDWkAUNV7Qvtd87uFKp5HoJ39f4tnlG6noD1xMCAA==
   </data>
  </layer>
  <objectgroup color="#ff0000" name="mobs" width="59" height="30">

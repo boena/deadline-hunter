@@ -59,6 +59,7 @@ class GameWorld extends World {
 		{
 			for(object in mobGroup.objects)
 			{
+				totalMobs++;
 				var m : Bug = new Bug(object.x, object.y - 16);
 				add(m);
 			}
@@ -69,6 +70,7 @@ class GameWorld extends World {
 		{
 			for(object in powGroup.objects)
 			{
+				totalCodePieces++;
 				var m : CodePiece = new CodePiece(1, object.x, object.y);
 				add(m);
 			}
@@ -85,7 +87,7 @@ class GameWorld extends World {
 		// Finished the map
 		if(_player.x < 0)
 		{
-			HXP.world = new GameWorld();
+			HXP.world = new FinishWorld(codeCollected, totalCodePieces, mobsKilled, totalMobs);
 		}
 
 		//Center the camera on the player
