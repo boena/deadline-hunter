@@ -17,7 +17,9 @@ class Bug extends PhysicsEntity {
 	{
 		super(pX, pY);
 		
-		sprite = new Spritemap("gfx/bug.png");
+		sprite = new Spritemap("gfx/bug.png", 32, 32);
+		sprite.add("run", [1, 2, 3], 8);
+		sprite.play("run");
 		graphic = sprite;
 		
 		type = 'mob';

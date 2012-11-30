@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="40" height="15" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" width="59" height="30" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="tileset" tilewidth="32" tileheight="32">
   <image source="../gfx/tileset.png" width="320" height="64"/>
  </tileset>
- <layer name="stage" width="40" height="15">
+ <tileset firstgid="21" name="hq" tilewidth="106" tileheight="13">
+  <image source="../gfx/hq.png" width="106" height="13"/>
+ </tileset>
+ <layer name="bg" width="59" height="30">
   <data encoding="base64" compression="zlib">
-   eJxjYBgF1AKMROLBDoaDH4YCGA1X2gEmJDwKqANGw5Q0MBzCi4nKmN72DTQGAElDALs=
+   eJzt0TEKwDAIBdAM9v5XzhoKITRDau17IC5/8GNrQCbx9gEH6VpLTHZVMczMdZvdTAarf1bquqLr88wX/KkrAAAAkEcHxncA8Q==
   </data>
  </layer>
- <objectgroup color="#ff0000" name="mobs" width="40" height="15">
+ <layer name="stage" width="59" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztl8kOgCAMRIXEk8v/f66QeDAkBpAuU+pL5ojtswdoWHwQ7nigdA2NsciX3q3+D9S+OOB2RZq3R1ftSJDrrEK1tEFzjY9Q8+a6pewpR8rJUFcD7blyzrFE21WS7BqJU4P6e61wuGqk1XWG9Lh6YEZXhDeaFB5ckd7eXCDuGRyg7lSUoO+Po0jdwwiM9urN1Yrv79p33purlYy6XqpQAhA=
+  </data>
+ </layer>
+ <objectgroup color="#ff0000" name="mobs" width="59" height="30">
   <object x="485" y="386" width="22" height="21"/>
+  <object x="197" y="196" width="22" height="23"/>
+  <object x="519" y="198" width="19" height="19"/>
+  <object x="966" y="195" width="16" height="16"/>
  </objectgroup>
- <objectgroup color="#aaff00" name="pows" width="40" height="15">
+ <objectgroup color="#aaff00" name="pows" width="59" height="30">
   <object x="98" y="33" width="28" height="18"/>
  </objectgroup>
 </map>

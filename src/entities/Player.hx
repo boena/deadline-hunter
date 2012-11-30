@@ -7,6 +7,7 @@ import com.haxepunk.utils.Key;
 import com.haxepunk.Entity;
 import com.haxepunk.graphics.Image;
 import com.haxepunk.masks.Circle;
+import com.haxepunk.graphics.Spritemap;
 
 private enum JumpStyle
 {
@@ -17,6 +18,7 @@ private enum JumpStyle
 
 class Player extends PhysicsEntity 
 {
+	private var sprite:Spritemap;
 	private static var jumpStyle:JumpStyle = Normal;
 	private static inline var kMoveSpeed:Float = 1.2;
 	private static inline var kJumpForce:Int = 20;
@@ -29,14 +31,17 @@ class Player extends PhysicsEntity
 
 		hasTouchTheGround = false;
 
-		graphic = new Image("gfx/player.png");
+		sprite = new Spritemap("gfx/player.png", 34, 32);
+		sprite.add("idle", [0]);
+		sprite.add("run", [1, 2, 3], 8);
+		graphic = sprite;
 
 		Input.define("left", [Key.LEFT, Key.A]);
 		Input.define("right", [Key.RIGHT, Key.D]);
 		Input.define("jump", [Key.UP, Key.W]);
 		Input.define("attack", [Key.SPACE]);
 
-		setHitbox(48, 32);
+		setHitboxTo(sprite);
 
 		// Set physics
 		gravity.y = 1.8;
@@ -94,7 +99,7 @@ class Player extends PhysicsEntity
 
   private function setAnimations()
 	{
-		/*if (velocity.x == 0)
+		if (velocity.x == 0)
 		{
 			// we are stopped, set animation to idle
 			sprite.play("idle");
@@ -102,7 +107,7 @@ class Player extends PhysicsEntity
 		else
 		{
 			// we are moving, set animation to walk
-			sprite.play("walk");
+			sprite.play("run");
 
 			// this will flip our sprite based on direction
 			if (velocity.x < 0) // left
@@ -113,6 +118,6 @@ class Player extends PhysicsEntity
 			{
 				sprite.flipped = false;
 			}
-		}*/
+		}
 	}
 }
