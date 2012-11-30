@@ -1,18 +1,26 @@
 package worlds;
 
-import com.haxepunk.World;
-import com.haxepunk.graphics.Image;
+import com.haxepunk.HXP;
+import com.haxepunk.tmx.TmxMap;
+import com.haxepunk.tmx.TmxEntity;
+import com.haxepunk.tmx.TmxObject;
+import com.haxepunk.tmx.TmxObjectGroup;
 import com.haxepunk.utils.Input;
 import com.haxepunk.utils.Key;
+import com.haxepunk.utils.Input;
+import com.haxepunk.World;
 
 import com.haxepunk.tmx.TmxEntity;
+import flash.geom.Point;
 
 import entities.Player;
+import entities.Block;
+
 
 class GameWorld extends World {
 
-	private var _player:Player;
-	
+	private var _player : Player;
+		
 	public function new()
 	{
 		super();
@@ -21,13 +29,16 @@ class GameWorld extends World {
 	public override function begin()
 	{
 		var e = new TmxEntity("levels/map.tmx");
-		e.loadGraphic("gfx/tileset.png", ["bg"]);
-		e.loadMask("bg", "block");
+		e.loadGraphic("gfx/tileset.png", ["stage"]);
+		e.loadMask("stage");
 		add(e);
 
-		_player = new Player(250, 352);
-		add(_player);
+		//var block = new Block(0, 400);
+		//add(block);
 
+		_player = new Player(0, 0);
+		add(_player);
+		
 		Input.define("restart", [Key.ESCAPE]);
 	}
 
