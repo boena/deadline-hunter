@@ -21,6 +21,8 @@ class Player extends Entity {
 		Input.define("left", [Key.LEFT, Key.A]);
 		Input.define("right", [Key.RIGHT, Key.D]);
 
+		setHitbox(32,32);
+
 		_velocity = 0;
 	}
 
@@ -40,6 +42,11 @@ class Player extends Entity {
 		}
   }
 
+  public override function moveCollideX(e:Entity)
+  {
+  	_velocity = 0;
+  }
+
   private function move() 
   {
   	_velocity += _acceleration;
@@ -57,7 +64,7 @@ class Player extends Entity {
   		_velocity = Math.max(_velocity - 0.4, 0);
   	}
 
-  	moveBy(_velocity, 0);
+  	moveBy(_velocity, 0, "block");
   }
  
 	private function setAnimations()

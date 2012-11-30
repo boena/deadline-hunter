@@ -22,10 +22,10 @@ class GameWorld extends World {
 	{
 		var e = new TmxEntity("levels/map.tmx");
 		e.loadGraphic("gfx/tileset.png", ["bg"]);
-		e.loadMask("bg", "collidable");
+		e.loadMask("bg", "block");
 		add(e);
 
-		_player = new Player(30, 352);
+		_player = new Player(250, 352);
 		add(_player);
 
 		Input.define("restart", [Key.ESCAPE]);
