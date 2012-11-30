@@ -47,19 +47,31 @@ class GameWorld extends World {
 
 		_player = new Player(32, 300);
 		add(_player);
-
-		var bug = new Bug(485, 300);
-		add(bug);		
-
-		var code = new CodePiece(1, 32, 32, 1, 2);
-		add(code);
-
-		//initObjectsFromMap();
+		
+		initObjectsFromMap();
 	}
 
 	private function initObjectsFromMap() 
 	{
-		//var mobGroup : TmxObjectGroup
+		var mobGroup : TmxObjectGroup = _map.map.getObjectGroup("mobs");
+		if(mobGroup != null)
+		{
+			for(object in mobGroup.objects)
+			{
+				var m : Bug = new Bug(object.x, object.y - 16);
+				add(m);
+			}
+		}
+
+		var powGroup : TmxObjectGroup = _map.map.getObjectGroup("pows");
+		if(powGroup != null)
+		{
+			for(object in powGroup.objects)
+			{
+				var m : CodePiece = new CodePiece(1, object.x, object.y);
+				add(m);
+			}
+		}
 	}
 
 	public override function update()
