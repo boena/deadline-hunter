@@ -147,6 +147,11 @@ class ApplicationMain {
 			 return Assets.getFont ("font/04B_03__.ttf");
 		 
 		
+		if (inName=="levels/map.tmx")
+			 
+            return Assets.getBytes ("levels/map.tmx");
+         
+		
 		
 		return null;
 		
@@ -178,4 +183,5 @@ class NME_font_04b_03___ttf extends nme.text.Font { }
 class NME_gfx_player_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_gfx_tileset_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_font_5 extends nme.text.Font { }
+class NME_levels_map_tmx extends nme.utils.ByteArray { }
 

@@ -10,6 +10,7 @@ import com.haxepunk.graphics.Image;
 class Player extends Entity {
 
 	private var _velocity:Float;
+	private var _acceleration:Float;
 
 	public function new(x:Int, y:Int)
 	{
@@ -28,12 +29,12 @@ class Player extends Entity {
 
 		if (Input.check("left"))
 		{
-			_velocity = -2;
+			_velocity = -5;
 		}
 
 		if (Input.check("right"))
 		{
-			_velocity = 2;
+			_velocity = 5;
 		}
   }
  

@@ -50,6 +50,8 @@ class Assets {
 			resourceTypes.set ("gfx/tileset.png", "image");
 			resourceClasses.set ("font/04B_03__.ttf", NME_font_5);
 			resourceTypes.set ("font/04B_03__.ttf", "font");
+			resourceClasses.set ("levels/map.tmx", NME_levels_map_tmx);
+			resourceTypes.set ("levels/map.tmx", "string");
 			
 			initialized = true;
 			
