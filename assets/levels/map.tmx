@@ -5,7 +5,10 @@
  </tileset>
  <layer name="stage" width="20" height="15">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUDBbACMUDZR7TIMcAIigAVQ==
+   eJxjYBgFo2AUjAIIYBrkGAAeUABR
   </data>
  </layer>
+ <objectgroup color="#ff0000" name="mobs" width="20" height="15">
+  <object x="485" y="386" width="22" height="21"/>
+ </objectgroup>
 </map>

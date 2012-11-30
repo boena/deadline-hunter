@@ -20,7 +20,7 @@ import entities.Block;
 class GameWorld extends World {
 
 	private var _player : Player;
-		
+			
 	public function new()
 	{
 		super();
@@ -28,13 +28,10 @@ class GameWorld extends World {
 
 	public override function begin()
 	{
-		var e = new TmxEntity("levels/map.tmx");
-		e.loadGraphic("gfx/tileset.png", ["stage"]);
-		e.loadMask("stage");
-		add(e);
-
-		//var block = new Block(0, 400);
-		//add(block);
+		var _map = new TmxEntity("levels/map.tmx");
+		_map.loadGraphic("gfx/tileset.png", ["stage"]);
+		_map.loadMask("stage");
+		add(_map);
 
 		_player = new Player(0, 0);
 		add(_player);
