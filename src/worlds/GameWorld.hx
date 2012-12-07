@@ -135,7 +135,7 @@ class GameWorld extends World {
 		}
 
 		var mobHit : Bug = cast _player.weapon.collide('mob', _player.weapon.x, _player.weapon.y);
-		if(mobHit != null) // && _player.weapon._visible)
+		if(mobHit != null && _player.weapon.graphic.visible)
 		{
 			remove(mobHit);
 			mobsKilled++;

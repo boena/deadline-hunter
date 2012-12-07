@@ -2,19 +2,18 @@
 package entities.weapons;
 
 import com.haxepunk.Entity;
+import entities.PhysicsEntity;
 
-class Weapon extends Entity {
+class Weapon extends PhysicsEntity {
 	
-	public var _facingLeft:Bool;
-	public var _visible:Bool = false;
+	public var hitDamage:Int = 1;
 
-	public function new(x:Float, y:Float, facingLeft:Bool)
+	public function new(x:Float, y:Float)
 	{
 		super(x, y);
-		_facingLeft = facingLeft;
 	}
 
-	public function use(player:Player)
+	public function use()
 	{
 
 	}

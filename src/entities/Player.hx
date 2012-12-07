@@ -97,7 +97,7 @@ class Player extends PhysicsEntity
 
 		if(_onGround && Input.pressed("attack"))
 		{				
-			weapon.use(this);
+			weapon.use();
 		}
   }
 
