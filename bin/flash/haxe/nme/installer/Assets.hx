@@ -58,6 +58,8 @@ class Assets {
 			resourceTypes.set ("gfx/menu.png", "image");
 			resourceClasses.set ("gfx/player.png", NME_gfx_player_png);
 			resourceTypes.set ("gfx/player.png", "image");
+			resourceClasses.set ("gfx/sword.png", NME_gfx_sword_png);
+			resourceTypes.set ("gfx/sword.png", "image");
 			resourceClasses.set ("gfx/tileset.png", NME_gfx_tileset_png);
 			resourceTypes.set ("gfx/tileset.png", "image");
 			resourceClasses.set ("sfx/code.wav", NME_sfx_code_wav);

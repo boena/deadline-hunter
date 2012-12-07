@@ -55,7 +55,7 @@ class Player extends PhysicsEntity
 		maxVelocity.y = kJumpForce;
 		maxVelocity.x = kMoveSpeed * 4;
 		friction.x = 0.82; // floor friction
-		friction.y = 0.99; // wall friction
+		friction.y = 0.99; // wall friction		
 	} 
 
 	public override function update()

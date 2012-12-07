@@ -27,12 +27,12 @@ class MeleeWeapon extends Weapon {
 
 		if(_player.facingLeft)
 		{	
-			x = _player.x - width + 8;
+			x = _player.x + 8;
 			x -= targetX;
 		}
 		else
 		{
-			x = _player.x + _player.width - 6;
+			x = _player.x + _player.width - 6 - width;
 			x += targetX;
 		}
 
@@ -40,8 +40,7 @@ class MeleeWeapon extends Weapon {
 		{
 			inMotion = false;
 			graphic.visible = false;
-		}
-		
+		}		
 	}
 
 	public override function use()

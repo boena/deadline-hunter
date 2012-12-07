@@ -14,9 +14,11 @@ class Sword extends MeleeWeapon
 		_player = player;
 		_hittingLength = 20;
 
-		graphic = Image.createRect(16, 4);
-		graphic.visible = false;
+		graphic = new Image("gfx/sword.png");
+		graphic.visible = false;		
 		
-		setHitbox(20, 4);
+		setHitbox(20, 6);
+
+		layer = 8;
 	}
 }

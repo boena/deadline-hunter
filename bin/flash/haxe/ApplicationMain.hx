@@ -167,6 +167,11 @@ class ApplicationMain {
             return Assets.getBitmapData ("gfx/player.png");
          
 		
+		if (inName=="gfx/sword.png")
+			 
+            return Assets.getBitmapData ("gfx/sword.png");
+         
+		
 		if (inName=="gfx/tileset.png")
 			 
             return Assets.getBitmapData ("gfx/tileset.png");
@@ -232,6 +237,7 @@ class NME_gfx_gameover_png extends nme.display.BitmapData { public function new 
 class NME_gfx_hq_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_gfx_menu_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_gfx_player_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_gfx_sword_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_gfx_tileset_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_sfx_code_wav extends nme.media.Sound { }
 class NME_sfx_die_wav extends nme.media.Sound { }
