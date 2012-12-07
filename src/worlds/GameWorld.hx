@@ -19,7 +19,7 @@ import entities.Player;
 import entities.Block;
 import entities.mobs.Bug;
 import entities.CodePiece;
-
+import entities.weapons.Sword;
 
 class GameWorld extends World {
 
@@ -48,6 +48,8 @@ class GameWorld extends World {
 
 		_player = new Player(32, 300);
 		add(_player);
+		_player.weapon = new Sword(0, 0, _player);
+		add(_player.weapon);
 		
 		initObjectsFromMap();
 	}
@@ -130,6 +132,13 @@ class GameWorld extends World {
 			_player.hp--;
 			if(_player.hp <= 0)
 				HXP.world = new GameOverWorld();
+		}
+
+		var mobHit : Bug = cast _player.weapon.collide('mob', _player.weapon.x, _player.weapon.y);
+		if(mobHit != null) // && _player.weapon._visible)
+		{
+			remove(mobHit);
+			mobsKilled++;
 		}
 	}
 }

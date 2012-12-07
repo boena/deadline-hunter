@@ -9,6 +9,9 @@ import com.haxepunk.graphics.Image;
 import com.haxepunk.masks.Circle;
 import com.haxepunk.graphics.Spritemap;
 
+import entities.weapons.Weapon;
+import entities.weapons.Sword;
+
 private enum JumpStyle
 {
 	Normal;
@@ -20,17 +23,20 @@ class Player extends PhysicsEntity
 {
 	private var sprite:Spritemap;
 	private static var jumpStyle:JumpStyle = Normal;
-	private static inline var kMoveSpeed:Float = 1.2;
+	private static inline var kMoveSpeed:Float = 1.6;
 	private static inline var kJumpForce:Int = 20;
-	public var hp:Int = 3;
 
-	public var hasTouchTheGround(default, null) : Bool;
+	public var hp : Int = 3;
+	public var facingLeft = false;
+	public var weapon : Weapon;
 
-	public function new(x:Int, y:Int)
+	public var hasTouchedTheGround(default, null) : Bool;
+
+	public function new(x:Float, y:Float)
 	{
 		super(x, y);
 
-		hasTouchTheGround = false;
+		hasTouchedTheGround = false;
 
 		sprite = new Spritemap("gfx/player.png", 34, 32);
 		sprite.add("idle", [0]);
@@ -56,31 +62,29 @@ class Player extends PhysicsEntity
 	{
 		acceleration.x = acceleration.y = 0;
 
-		if( !hasTouchTheGround && _onGround) hasTouchTheGround = true;
+		if( !hasTouchedTheGround && _onGround) hasTouchedTheGround = true;
 
 		handleInput();
 
 		setAnimations();
 
 		super.update();
+		weapon.update();
 	}
 
 	private function handleInput()
   {
-  	if (hasTouchTheGround && Input.check("left"))
+  	if (hasTouchedTheGround && Input.check("left"))
 		{
-			trace("left pushed");
 			acceleration.x = -kMoveSpeed;
 		}
-		else if (hasTouchTheGround && Input.check("right"))
+		else if (hasTouchedTheGround && Input.check("right"))
 		{
-			trace("right pushed");
 			acceleration.x = kMoveSpeed;
 		}
 
 		if(_onGround && Input.pressed("jump"))
 		{
-			trace("jump pushed");
 			switch (jumpStyle)
 			{
 				case Normal:
@@ -92,9 +96,8 @@ class Player extends PhysicsEntity
 		}
 
 		if(_onGround && Input.pressed("attack"))
-		{
-			trace("attack pushed");
-			// TODO: Add attack logic.
+		{				
+			weapon.use(this);
 		}
   }
 
@@ -114,10 +117,12 @@ class Player extends PhysicsEntity
 			if (velocity.x < 0) // left
 			{
 				sprite.flipped = true;
+				facingLeft = true;
 			}
 			else // right
 			{
 				sprite.flipped = false;
+				facingLeft = false;
 			}
 		}
 	}

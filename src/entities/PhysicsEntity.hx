@@ -65,7 +65,6 @@ class PhysicsEntity extends Entity
 
 	public override function moveCollideY(e:Entity)
 	{
-		trace("colliding Y");
 		if (velocity.y * HXP.sign(gravity.y) > 0)
 		{
 			_onGround = true;
@@ -79,7 +78,6 @@ class PhysicsEntity extends Entity
 
 	public override function moveCollideX(e:Entity)
 	{
-		trace("colliding X");
 		velocity.x = 0;
 		
 		velocity.y *= friction.y;
